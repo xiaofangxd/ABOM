@@ -9,9 +9,8 @@ import time
 class ABOM(Basic_Optimizer):
     """
     # Introduction
-    **Adaptive Meta Black-box Evolutionary Optimization Model (ABOM) is a novel self-attention-based evolution model parametrization, and uses self-generated evolution data for adaptive parameter update.
-    # Original paper
-    ""
+    Adaptive Meta Black-box Evolutionary Optimization Model (ABOM).
+    
     # Args:
     - config (object): Configuration object containing agent and training parameters.
     # Attributes:
