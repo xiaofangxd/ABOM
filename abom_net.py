@@ -123,7 +123,6 @@ class Residual(nn.Module):
 
     def forward(self, x: Tensor, f: Tensor, x_old: Tensor, generation_counter: int) -> Tensor:
         batch_size, pop_size, dim = x.size()
-        res_parm = self.res_parm.expand(batch_size, pop_size, 1)
         if self.flag: # Crossover path
             sublayer_output = self.sublayer(x, f, self.rng, generation_counter)
             ffn_output = self.ffn(sublayer_output)
