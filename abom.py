@@ -149,7 +149,7 @@ class ABOM(Basic_Optimizer):
             self.d_model = problem.dim
 
         if self.dim_mutation == None:
-            self.dim_mutation = int(problem.dim/2)
+            self.dim_mutation = 1<<((problem.dim).bit_length()-1)
 
         if self.device == 'cpu':
             rng = self.rng_cpu
